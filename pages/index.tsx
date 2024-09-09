@@ -1,5 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import Layout from "@/layaut/Layout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,102 +15,134 @@ const geistMono = localFont({
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <Layout>
+        <div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+          <div className="w-full bg-blue-950 px-20 pt-5 pb-32 flex flex-col gap-32">
+
+            <div className="w-full flex flex-col justify-center items-center">
+              <Image src="/title.svg" alt="title" width={1000} height={1000}/>
+              <span className="text-[20px] text-white" >From custom software development to cybersecurity, our team of experts is dedicated <br />
+               to delivering solutions that are tailored to your unique needs.</span> <br /> <br /> <br /> <br />
+               <button  className="w-[320px] h-[50px] text-white px-10 border rounded-[10px]">EXPLORE NOW</button>
+            </div>
+
+
+            <div className="flex flex-col gap-24">
+              <div>
+                <h1 className="text-[100px] text-white font-bold">WHY <br />Choose Us?</h1>
+              </div>
+
+
+              <div className="flex w-full justify-between items-center text-gray-300">
+
+                <div className="flex flex-col ">
+                  <Image src="/first.svg" alt="first" width={100} height={100}/> <br /> <br />
+                  <h1 className="text-[32px] text-white">expertise</h1> <br />
+                  <span >Our team of experienced experts <br /> have the knowledge and expertise <br />
+                to deliver innovative  IT solutions <br />
+                that meet your unique needs.</span>
+                </div>
+                <div className="flex flex-col ">
+                  <Image src="/second.svg" alt="first" width={80} height={100}/> <br /> <br />
+                  <h1 className="text-[32px] text-white">technology</h1> <br />
+                  <span>We stay up to date with the latest <br /> trends and technologies in the IT <br />
+                  industry, so you can get the most  <br />
+                  advanced solutions available.</span>
+                </div>
+                <div className="flex flex-col ">
+                  <Image src="/third.svg" alt="first" width={100} height={100}/> <br /> <br />
+                  <h1 className="text-[32px] text-white">solutions</h1> <br />
+                  <span>We take a personalized approach <br />to every project, working closely  <br />
+                  with you to understand your<br />
+                  business and create solutions.</span>
+                </div>
+                <div className="flex flex-col">
+                  <Image src="/fourth.svg" alt="first" width={100} height={100}/> <br /> <br />
+                  <h1 className="text-[32px] text-white">results</h1> <br />
+                  <span>Our track record speaks for itself –<br /> have the knowledge and expertise <br />
+                  sizes and industries achieve their<br />
+                  goals with our IT solutions.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="w-full px-20 pt-[200px]  h-[900px] flex flex-col gap-20 bg-[url(/bg.svg)] bg-center bg-cover ">
+            <div className="w-full flex flex-col justify-center items-center">
+              <div className="flex gap-10 items-start">
+              <Image src="yag.svg" alt="yag" width={800} height={300}/>
+              <Image src="du.svg" alt="yag" width={500} height={200}/>
+              </div> <br /> <br /><br />
+              <Image src="se.svg" alt="yag" width={900} height={300}/>
+          </div>
+
+          <div className="w-full flex flex-col justify-center items-center">
+          <span className="text-[20px] text-center">That's why we're committed to delivering innovative IT solutions to businesses of all <br /> sizes. Our team of experienced professionals is dedicated to helping you achieve <br /> your goals and thrive in a rapidly evolving digital landscape.</span>
+          </div>
+          <div className="w-full flex flex-col justify-center items-center">
+          <Image src="Numbers.svg" alt="numbers" width={1300} height={200}/>
+          </div>
+
+          </div>
+
+
+          <div className="w-full  px-20 pt-[100px]  bg-blue-950 flex flex-col gap-32 pb-[200px] ">
+            <div className="flex justify-between items-center"><h1 className="text-white text-[100px] font-bold">Client Stories</h1> <Image src="/strelka.svg" alt="logo" width={50} height={100}/> </div>
+
+            <div className="flex justify-between">
+
+              <div>
+                <h1 className="text-[50px] text-blue-400 font-bold">Amazing!</h1> <br />
+                <span className="text-white">“WaveNet's cybersecurity solution gave us the peace of mind we <br /> needed to focus on our business. They took the time to understand <br /> our unique needs and created a solution that protected our sensitive <br /> data and ensured compliance with industry regulations.”</span>
+                <br /> <br /><br />
+                <div className="flex items-center justify-end gap-10">
+                  <div><h1 className="text-white font-bold">Tom Johnson</h1> <span className="text-gray-300">CIO of Mika Medika Healthcare</span></div>
+                  <Image src="/pisar.svg" alt="pisar" width={70} height={70}/>
+                </div>
+              </div>
+
+              <div className="w-[1px] h-[380px] bg-white "></div> 
+
+              <div>
+                <h1 className="text-[50px] text-blue-400 font-bold">Best Service</h1> <br />
+                <span className="text-white">“We were struggling to keep up with the demands of our growing <br />business until we partnered with WaveNet. Their custom software <br /> development solution has helped us streamline our operations and <br /> improve efficiency, saving us time and money.”</span>
+                <br /> <br /><br />
+                <div className="flex items-center justify-end gap-10">
+                  <div><h1 className="text-white font-bold">Jane Doe</h1> <span className="text-gray-300">COO of DEF Manufacturing</span></div>
+                  <Image src="/duxtar.svg" alt="pisar" width={70} height={70}/>
+                </div>
+              </div>
+
+
+            </div>
+
+            <Image src="/brands.svg" alt="brands" width={1600} height={200}/>
+          </div>
+
+
+          <div className="w-full bg-gray-300 px-20 py-[200px] flex flex-col gap-10">
+            <div className="flex justify-center items-center"><h1 className="text-[80px] font-bold">Services</h1></div> <br />
+            <div className="flex justify-between items-center"><h1 className="text-[56px]">Web Development</h1> <Image src="/chorniy.svg" alt="strelka" width={60} height={10}/></div>
+            <div className="w-full h-[1px] bg-black"></div>
+            <div className="flex justify-between items-center"><h1 className="text-[56px]">Mobile Development</h1> <Image src="/chorniy.svg" alt="strelka" width={60} height={10}/></div>
+            <div className="w-full h-[1px] bg-black"></div>
+            <div className="flex justify-between">
+              <div className="flex flex-col gap-10"><h1 className="text-[56px] font-bold">Cyber Security</h1> <span>Our cyber security service provides advanced protection for your data and <br /> systems against potential threats and attacks, ensuring your business<br />
+               operates securely and efficiently.</span> <Image src="/chorniy.svg" alt="strelka" width={60} height={20}/> </div>
+               <Image src="/odam.svg" alt="odam" width={800} height={200}/>
+            </div>
+            <div className="w-full h-[1px] bg-black"></div>
+            <div className="flex justify-between items-center"><h1 className="text-[56px]">Digital Marketing</h1> <Image src="/chorniy.svg" alt="strelka" width={60} height={10}/></div>
+            <div className="w-full h-[1px] bg-black"></div>
+          </div>
+
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </Layout>
     </div>
   );
 }
