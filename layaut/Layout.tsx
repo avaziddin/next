@@ -10,7 +10,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({children}) => {
     return (
         <>
-        <header className="flex bg-blue-950 pt-20 pl-20 pr-20 pb-10 justify-between items-center fixed w-full">
+        <header className="flex bg-blue-950 pt-2 pl-20 pr-20 pb-1 justify-between items-center fixed w-full">
         <div>
         <Image src="/logo.svg" alt="logo" width={200} height={200}/>
         </div>
