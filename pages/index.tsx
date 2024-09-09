@@ -20,7 +20,7 @@ export default function Home() {
         <div>
 
 
-          <div className="w-full bg-blue-950 px-20 pt-5 pb-32 flex flex-col gap-32 bg-[url(/bgg.svg)] bg-center bg-cover">
+          <div className="w-full bg-blue-950 px-20 pt-40 pb-32 flex flex-col gap-32 bg-[url(/bgg.svg)] bg-center bg-cover">
 
             <div className="w-full flex flex-col justify-center items-center">
               <Image src="/title.svg" alt="title" width={1000} height={1000}/>
